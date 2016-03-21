@@ -79,10 +79,18 @@ This is a full native iPhone app to create realtime, text based group or private
 ## INSTALLATION
 
 ###Podfile
-`pod 'Parse'`  
-`pod 'ParseFacebookUtilsV4'`  
-`pod 'ParseTwitterUtils'`  
-`pod 'FBSDKCoreKit', '~> 4.10'`  
+	platform :ios, '8.4'
+	
+	pod 'Parse'
+	pod 'ParseFacebookUtilsV4'
+	pod 'ParseTwitterUtils'
+	pod 'FBSDKCoreKit'
+	pod 'Firebase'
+	pod 'ProgressHUD'
+	pod 'SDWebImage'
+	pod 'RNGridMenu'
+	pod 'MBProgressHUD'
+	pod 'IDMPhotoBrowser'
 
 
 **1.,** You need the latest **Parse SDK** (use Pods).
@@ -106,15 +114,10 @@ This is a full native iPhone app to create realtime, text based group or private
 
 	https://github.com/AFNetworking/AFNetworking
 	https://github.com/fernandospr/CoreLocationUtils
-	https://github.com/ideaismobile/IDMPhotoBrowser
 	https://github.com/hackiftekhar/IQAudioRecorderController
 	https://github.com/jessesquires/JSQMessagesViewController
 	https://github.com/jessesquires/JSQSystemSoundPlayer
-	https://github.com/jdg/MBProgressHUD
-	https://github.com/relatedcode/ProgressHUD
 	https://github.com/RNCryptor/RNCryptor
-	https://github.com/rnystrom/RNGridMenu
-	https://github.com/rs/SDWebImage
 
 To use these libraries, just add the downloaded directories to your project.
 
