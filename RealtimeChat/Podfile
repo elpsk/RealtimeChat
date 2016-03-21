@@ -1,5 +1,12 @@
+platform :ios, '8.4'
+
 pod 'Parse'
 pod 'ParseFacebookUtilsV4'
 pod 'ParseTwitterUtils'
-pod 'FBSDKCoreKit', '~> 4.10'
-
+pod 'FBSDKCoreKit'
+pod 'Firebase'
+pod 'ProgressHUD'
+pod 'SDWebImage'
+pod 'RNGridMenu'
+pod 'MBProgressHUD'
+pod 'IDMPhotoBrowser'
