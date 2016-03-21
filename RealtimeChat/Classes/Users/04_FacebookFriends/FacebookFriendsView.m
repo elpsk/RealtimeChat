@@ -52,6 +52,7 @@
 - (void)loadFacebook
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    // invitable_friends
 	FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me/friends?limit=5000" parameters:@{@"fields": @"id, name"}];
 	[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error)
 	{

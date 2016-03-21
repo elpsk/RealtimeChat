@@ -1,0 +1,5 @@
+pod 'Parse'
+pod 'ParseFacebookUtilsV4'
+pod 'ParseTwitterUtils'
+pod 'FBSDKCoreKit', '~> 4.10'
+

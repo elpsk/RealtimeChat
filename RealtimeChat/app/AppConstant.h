@@ -16,7 +16,7 @@
 #define		NSERROR(text, number)				[NSError errorWithDomain:text code:number userInfo:nil]
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-#define		FIREBASE							@"https://realtime70.firebaseio.com"
+#define		FIREBASE							@"https://brilliant-inferno-166.firebaseio.com"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 #define		DEFAULT_TAB							0
@@ -51,7 +51,7 @@
 #define		LINK_PREMIUM						@"http://www.relatedcode.com/premium"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-#define		LINK_PARSE							@"https://files.parsetfss.com"
+#define		LINK_PARSE							@"http://localhost:1337/parse" //@"https://files.parsetfss.com"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 #define		MESSAGE_INVITE						@"Check out chatexamples.com"

@@ -31,7 +31,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[Parse setApplicationId:@"roeLftHfpCP25HbQATB4pJJiagPYYXqekccnXo1l" clientKey:@"QsvHcijsJ4PZHMYvHT9sO2FcvMOg7r93vU7UwxC9"];
+//	[Parse setApplicationId:@"roeLftHfpCP25HbQATB4pJJiagPYYXqekccnXo1l" clientKey:@"QsvHcijsJ4PZHMYvHT9sO2FcvMOg7r93vU7UwxC9"];
+//    [Parse setApplicationId:@"pskAppId" clientKey:@"pskKeyId"];
+
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"pskAppId";
+        configuration.clientKey = @"pskKeyId";
+        configuration.server = @"http://localhost:2929/parse";
+    }]];
+
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[PFTwitterUtils initializeWithConsumerKey:@"kS83MvJltZwmfoWVoyE1R6xko" consumerSecret:@"YXSupp9hC2m1rugTfoSyqricST9214TwYapQErBcXlP1BrSfND"];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
