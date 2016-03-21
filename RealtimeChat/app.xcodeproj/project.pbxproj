@@ -1968,7 +1968,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.relatedcode.chat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertopasca.chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1994,7 +1994,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.relatedcode.chat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertopasca.chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
