@@ -1,20 +1,6 @@
-[![I am available for hire](http://relatedcode.com/github/header10.png)](http://relatedcode.com)
-
-## OVERVIEW
-
 This is a full native iPhone app to create realtime, text based group or private chat with Parse and Firebase.
 
 ![Chat](http://relatedcode.com/github/chat821.png)
-.
-![Chat](http://relatedcode.com/github/chat803.png)
-.
-![Chat](http://relatedcode.com/github/chat818.png)
-
-![Chat](http://relatedcode.com/github/chat804.png)
-.
-![Chat](http://relatedcode.com/github/chat820.png)
-.
-![Chat](http://relatedcode.com/github/chat819.png)
 
 ## FEATURES
 
@@ -35,23 +21,10 @@ This is a full native iPhone app to create realtime, text based group or private
 - Sending videos
 - Sending audio messages
 - Sending location
-- Sending stickers - **[Premium only](http://relatedcode.com/premium)**
 - Sending large emojis
 - MD5 checksum for media messages
-- Media message reload option if download is failed - **[Premium only](http://relatedcode.com/premium)**
 - Media files cached locally
 - AES-256 encryption
-- Dynamic password generation - **[Premium only](http://relatedcode.com/premium)**
-- Load earlier messages - **[Premium only](http://relatedcode.com/premium)**
-- Typing indicator - **[Premium only](http://relatedcode.com/premium)**
-- Message delivery receipt - **[Premium only](http://relatedcode.com/premium)**
-- Message read receipt - **[Premium only](http://relatedcode.com/premium)**
-- Save picture messages to device - **[Premium only](http://relatedcode.com/premium)**
-- Save video messages to device - **[Premium only](http://relatedcode.com/premium)**
-- Save audio messages to device - **[Premium only](http://relatedcode.com/premium)**
-- Delete read and unread messages - **[Premium only](http://relatedcode.com/premium)**
-- Block user functionality - **[Premium only](http://relatedcode.com/premium)**
-- Report user functionality - **[Premium only](http://relatedcode.com/premium)**
 - Address Book friend list
 - Invite functionality - SMS, email
 - Facebook friend list (list only registered users)
@@ -78,13 +51,22 @@ This is a full native iPhone app to create realtime, text based group or private
 - Deployment target: iOS 8+
 - Supported devices: iPhone 4S/5/5C/5S/6/6 Plus/6S/6S Plus
 
----
+###PREMIUM
+- Media message reload option if download is failed - **[Premium only](http://relatedcode.com/premium)**
+- Sending stickers - **[Premium only](http://relatedcode.com/premium)**
+- Dynamic password generation - **[Premium only](http://relatedcode.com/premium)**
+- Load earlier messages - **[Premium only](http://relatedcode.com/premium)**
+- Typing indicator - **[Premium only](http://relatedcode.com/premium)**
+- Message delivery receipt - **[Premium only](http://relatedcode.com/premium)**
+- Message read receipt - **[Premium only](http://relatedcode.com/premium)**
+- Save picture messages to device - **[Premium only](http://relatedcode.com/premium)**
+- Save video messages to device - **[Premium only](http://relatedcode.com/premium)**
+- Save audio messages to device - **[Premium only](http://relatedcode.com/premium)**
+- Delete read and unread messages - **[Premium only](http://relatedcode.com/premium)**
+- Block user functionality - **[Premium only](http://relatedcode.com/premium)**
+- Report user functionality - **[Premium only](http://relatedcode.com/premium)**
 
-![Chat](http://relatedcode.com/github/chat809.png)
-.
-![Chat](http://relatedcode.com/github/chat811.png)
-.
-![Chat](http://relatedcode.com/github/chat812.png)
+---
 
 ## REQUIREMENTS
 
@@ -92,57 +74,66 @@ This is a full native iPhone app to create realtime, text based group or private
 - iOS 8+
 - ARC
 
+
+
 ## INSTALLATION
 
-**1.,** All source files located in *Classes* directory. Vendor files located in *Vendor* directory and external Frameworks in *Framework* directory. Some resource files can be found in *Resources* directory. Simply add *Classes*, *Resources*, *Vendor* and *Framework* directories to your project.
+###Podfile
+`pod 'Parse'`  
+`pod 'ParseFacebookUtilsV4'`  
+`pod 'ParseTwitterUtils'`  
+`pod 'FBSDKCoreKit', '~> 4.10'`  
 
-**2.,** You need the latest Parse SDK. (Already included, but you can download from [here](https://www.parse.com/docs/downloads)).
 
-More info about how to [install](https://www.parse.com/apps/quickstart#parse_data/mobile/ios/native/existing) Parse SDK.
+**1.,** You need the latest **Parse SDK** (use Pods).
 
-**3.,** You also need the latest Firebase SDK. (Already included, but you can download from [here](https://www.firebase.com/docs/ios/alternate-setup.html)).
+**2.,** You also need the latest **Firebase SDK**. (Already included, but you can download from [here](https://www.firebase.com/docs/ios/alternate-setup.html)).
 
-More info about how to [install](https://www.firebase.com/docs/ios/alternate-setup.html) Firebase SDK.
+**Rules**:   
 
-**4.,** You also need the latest Facebook SDK. (Already included, but you can download from [here](https://developers.facebook.com/docs/ios)).
+	{
+	    "rules": {
+	        ".read": true,
+	        ".write": true,
+	        "Recent": {
+	          ".indexOn": ["userId", "groupId"]
+	        }
+	    }
+	}
+**3.,** You also need the latest **Facebook SDK** (use Pods).
 
-More info about how to [install](https://developers.facebook.com/docs/ios/getting-started) Facebook SDK.
+**4.,** You also need several external libraries which are included. But if you need, you can download them from here:
 
-**5.,** You also need several external libraries which are included. But if you need, you can download them from here:
-
-https://github.com/AFNetworking/AFNetworking<br>
-https://github.com/fernandospr/CoreLocationUtils<br>
-https://github.com/ideaismobile/IDMPhotoBrowser<br>
-https://github.com/hackiftekhar/IQAudioRecorderController<br>
-https://github.com/jessesquires/JSQMessagesViewController<br>
-https://github.com/jessesquires/JSQSystemSoundPlayer<br>
-https://github.com/jdg/MBProgressHUD<br>
-https://github.com/relatedcode/ProgressHUD<br>
-https://github.com/RNCryptor/RNCryptor<br>
-https://github.com/rnystrom/RNGridMenu<br>
-https://github.com/rs/SDWebImage<br>
+	https://github.com/AFNetworking/AFNetworking
+	https://github.com/fernandospr/CoreLocationUtils
+	https://github.com/ideaismobile/IDMPhotoBrowser
+	https://github.com/hackiftekhar/IQAudioRecorderController
+	https://github.com/jessesquires/JSQMessagesViewController
+	https://github.com/jessesquires/JSQSystemSoundPlayer
+	https://github.com/jdg/MBProgressHUD
+	https://github.com/relatedcode/ProgressHUD
+	https://github.com/RNCryptor/RNCryptor
+	https://github.com/rnystrom/RNGridMenu
+	https://github.com/rs/SDWebImage
 
 To use these libraries, just add the downloaded directories to your project.
 
-**6.,** You need to use your own [Parse account](https://www.parse.com/#signup).
+**5.,** You need to prepare your own [Parse server](https://github.com/ParsePlatform/parse-server).
 
-**7.,** You need to use your own [Firebase account](https://www.firebase.com/signup).
+**6.,** You need to use your own [Firebase account](https://www.firebase.com/signup).
 
-**8.,** You need to [register](https://developers.facebook.com/apps) your app at Facebook. More info about how to [configure](https://developers.facebook.com/docs/ios/getting-started) Facebook.
+**7.,** You need to [register](https://developers.facebook.com/apps) your app at Facebook. More info about how to [configure](https://developers.facebook.com/docs/ios/getting-started) Facebook.
 
-**9.,** You need to [configure](https://www.parse.com/tutorials/ios-push-notifications) Push Notification.
+**8.,** You need to [configure](https://www.parse.com/tutorials/ios-push-notifications) Push Notification.
 
-**10.,** Please replace the existing Parse account details in *AppDelegate.m*.
+**9.,** Please replace the existing Parse account details in *AppDelegate.m*.
 
-**11.,** Please replace the existing Firebase account details in *AppConstant.h*.
+**10.,** Please replace the existing Firebase account details in *AppConstant.h*.
 
-**12.,** Please replace the existing Facebook account details in *Info.plist*.
+**11.,** Please replace the existing Facebook account details in *Info.plist*.
 
-**13.,** Please replace the existing Twitter account details in *AppDelegate.m*.
+**12.,** Please replace the existing Twitter account details in *AppDelegate.m*.
 
-## CONTACT
-
-Do you have any questions or idea? My email is: info@relatedcode.com or you can find some more info at [relatedcode.com](http://relatedcode.com)
 
 ## LICENSE
 
